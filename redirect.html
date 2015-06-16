@@ -8,25 +8,7 @@
     <body>
  
         <script>
-		var IS_IPAD = navigator.userAgent.match(/iPad/i) != null,
-			IS_IPHONE = !IS_IPAD && ((navigator.userAgent.match(/iPhone/i) != null) || (navigator.userAgent.match(/iPod/i) != null)),
-			IS_IOS = IS_IPAD || IS_IPHONE,
-			IS_ANDROID = !IS_IOS && navigator.userAgent.match(/android/i) != null,
-			IS_MOBILE = IS_IOS || IS_ANDROID;
-        
-		
-    
-		// If it's not an universal app, use IS_IPAD or IS_IPHONE
-		if (IS_IOS) {
-			window.location = "medtronic://azure/login";		
-		} else if (IS_ANDROID) {
-		
-			// Instead of using the actual URL scheme, use 'intent://' for better UX
-			window.location = "medtronic://azure/login";
-			//window.location = 'intent://view?id=123#Intent;package=my.app.id;scheme=myapp;launchFlags=268435456;end;';
-		} else {
-			window.location = "http://www.google.com";
-		}
+		window.location = "medtronic://azure/login";
         </script>
  
         Redirecting...
